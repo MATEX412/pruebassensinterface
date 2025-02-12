@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     font-family: "Montserrat", serif;
     color: white;
 }
@@ -9,12 +9,14 @@
     display: flex;
     height: auto;
 }
+
 .main-content {
     flex: 1;
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -35,7 +37,7 @@
 
 /* Inicializa las tarjetas con opacidad 0 y desplazadas hacia abajo */
 .card {
-    background: #2A2A3B;
+    background: #00000056;
     border-radius: 10px;
     padding: 20px;
     flex: 1;
@@ -44,6 +46,7 @@
     transform: translateY(30px); /* Inicialmente desplazadas */
     animation: fadeSlideUp 1s ease-out forwards; /* Duración de la animación */
     border: 2px solid #3f3f57;
+    backdrop-filter: blur(10px);
 }
 
 /* Diferentes retrasos para cada tarjeta */
@@ -101,18 +104,19 @@
     object-fit: cover; /* Ajusta la imagen para que ocupe el contenedor sin deformarse */
 }
 
-
 /* Estilo para el título en la parte superior */
 .header {
     padding: 5px;
     text-align: center;
 }
+
 .header h1 {
     margin: 0;
     font-size: 25px;
     color: white;
     animation: fadeSlideUp 1s ease-out forwards; /* Duración de la animación */
 }
+
 .icon-container {
     position: absolute;
     top: 20px;
@@ -121,4 +125,43 @@
     color: white;
     cursor: pointer;
     animation: fadeSlideUp 1s ease-out forwards; /* Duración de la animación */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+    }
+
+    .main-content {
+        padding: 10px; /* Reduce el padding para dispositivos móviles */
+    }
+
+    .cards {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        gap: 10px; /* Reduce el espacio entre las tarjetas */
+    }
+
+    .card {
+        min-width: 60%; /* Las tarjetas ocupan el 100% del ancho */
+        padding: 15px; /* Reduce el padding de las tarjetas */
+    }
+
+    .card .chart {
+        height: 60px; /* Reduce la altura de las gráficas */
+    }
+
+    .header h1 {
+        font-size: 20px; /* Reduce el tamaño del título */
+    }
+
+    .icon-container {
+        font-size: 24px; /* Reduce el tamaño del ícono */
+        top: 10px; /* Ajusta la posición del ícono */
+        left: 10px;
+    }
+
+    .image-container{
+        padding-bottom: 250px;
+    }
 }
