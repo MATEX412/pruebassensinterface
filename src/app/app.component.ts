@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { SensInterfaceComponent } from './Interfaces/sens-interface/sens-interface.component';
-import { TempInterfaceComponent } from './Interfaces/temp-interface/temp-interface.component';
-import { HumidityInterfaceComponent } from './Interfaces/humidity-interface/humidity-interface.component';
-import { WeightInterfaceComponent } from './Interfaces/weight-interface/weight-interface.component';
+import { RouterModule } from '@angular/router';
+import { PesoInterfaceComponent } from './Interfaces/peso-interface/peso-interface.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SensInterfaceComponent, TempInterfaceComponent, HumidityInterfaceComponent, WeightInterfaceComponent],
+  standalone: true,
+  imports: [RouterModule, PesoInterfaceComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'myapp';
-}
+export class AppComponent {}

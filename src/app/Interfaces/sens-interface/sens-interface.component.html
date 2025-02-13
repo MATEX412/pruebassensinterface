@@ -2,17 +2,17 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <div class="dashboard">
-    <div class="card">
+    <div class="card" (click)="irATemperatura()">
         <h2>Temperatura</h2>
         <i class="uil uil-temperature-half"></i>
         <p>Información sobre la temperatura actual.</p>
     </div>
-    <div class="card">
+    <div class="card" (click)="irAHumedad()">
         <h2>Humedad</h2>
         <i class="uil uil-tear"></i>
         <p>Detalles de humedad en el ambiente.</p>
     </div>
-    <div class="card">
+    <div class="card" (click)="irAPeso()">
         <h2>Peso</h2>
         <i class="uil uil-balance-scale"></i>
         <p>Visualización de datos de peso.</p>
@@ -23,3 +23,4 @@
         <p>Estado y acceso a las cámaras en vivo.</p>
     </div>
 </div>
+

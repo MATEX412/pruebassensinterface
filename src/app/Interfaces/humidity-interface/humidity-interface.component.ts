@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-humidity-interface',
-  imports: [],
+  standalone: true,
+  imports: [RouterModule],
   templateUrl: './humidity-interface.component.html',
-  styleUrl: './humidity-interface.component.css'
+  styleUrls: ['./humidity-interface.component.css']
 })
 export class HumidityInterfaceComponent {
+  constructor(private router: Router) {}
 
+  regresar() {
+    this.router.navigate(['/sens']); // Redirige a la interfaz inicial
+  }
 }

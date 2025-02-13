@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-weight-interface',
-  imports: [],
-  templateUrl: './weight-interface.component.html',
-  styleUrl: './weight-interface.component.css'
+  selector: 'app-humidity-interface',
+  standalone: true,
+  imports: [RouterModule],
+  templateUrl: './humidity-interface.component.html',
+  styleUrls: ['./humidity-interface.component.css']
 })
-export class WeightInterfaceComponent {
+export class HumidityInterfaceComponent {
+  constructor(private router: Router) {}
 
+  regresar() {
+    this.router.navigate(['/sens']); // Redirige a la interfaz inicial
+  }
 }
