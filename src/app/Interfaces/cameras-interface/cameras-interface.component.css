@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", serif;
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: auto;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cameras{
+    background: #00000056;
+    border-radius: 2rem;
+    height: 500px;
+    opacity: 0; /* Inicialmente invisibles */
+    transform: translateY(30px); /* Inicialmente desplazadas */
+    animation: fadeSlideUp 1s ease-out forwards; /* Duración de la animación */
+    border: 2px solid #3f3f57;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.camera-container{
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width: 450px;
+    border-radius: 2rem;
+    opacity: 0; /* Inicialmente invisibles */
+    transform: translateY(30px); /* Inicialmente desplazadas */
+    animation: fadeSlideUp 1s ease-out forwards; /* Duración de la animación */
+}
+
+.camera-container i{
+    font-size: 85px;
+}
+
+/* Animación de Fade + Slide */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Inicia desplazado hacia abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Vuelve a su posición original */
+    }
+}
+
+/* Estilo para el título en la parte superior */
+.header {
+    padding: 5px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 25px;
+    color: white;
+    animation: fadeSlideUp 1s ease-out forwards; /* Duración de la animación */
+}
+
+.icon-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    animation: fadeSlideUp 1s ease-out forwards; /* Duración de la animación */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+    }
+
+    .main-content {
+        padding: 10px; /* Reduce el padding para dispositivos móviles */
+    }
+
+    .header h1 {
+        font-size: 20px; /* Reduce el tamaño del título */
+    }
+
+    .icon-container {
+        font-size: 24px; /* Reduce el tamaño del ícono */
+        top: 10px; /* Ajusta la posición del ícono */
+        left: 10px;
+    }
+
+    .camera-container{
+        height: 60%;
+        width: 85%;
+    }
+}

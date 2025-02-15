@@ -2,13 +2,12 @@ import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-humidity-interface',
-  standalone: true,
-  imports: [RouterModule],
-  templateUrl: './humidity-interface.component.html',
-  styleUrls: ['./humidity-interface.component.css']
+  selector: 'app-cameras-interface',
+  imports: [],
+  templateUrl: './cameras-interface.component.html',
+  styleUrl: './cameras-interface.component.css'
 })
-export class HumidityInterfaceComponent {
+export class CamerasInterfaceComponent {
   constructor(private router: Router) {}
 
   regresar() {

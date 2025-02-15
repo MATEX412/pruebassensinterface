@@ -20,4 +20,8 @@ export class SensInterfaceComponent {
   irAPeso() {
     this.router.navigate(['/peso']);  // Navega a la interfaz de peso
   }
+
+  irACamaras(){
+    this.router.navigate(['/camaras']);
+  }
 }
